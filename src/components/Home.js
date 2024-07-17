@@ -8,7 +8,6 @@ const HomePage = () => {
     axios
       .get("https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a")
       .then((response) => {
-        // Assuming response.data.drinks is an array and checking if index 6 exists
         if (response.data.drinks && response.data.drinks.length > 6) {
           const drink = response.data.drinks[7];
           setDrinkAtIndex(drink);
@@ -36,14 +35,13 @@ const HomePage = () => {
               </div>
               <div className="w-full h-3/5 flex flex-row justify-between items-center p-4">
                 <div className="text-lg text-gray-900 leading-relaxed mb-4">
-                  <p className="">
-                    {" "}
+                  <p className="p-4 text-xl">
                     Becardi Breezer, Breezer for short, is a<br /> fruit-based
                     alcoholic drink which comes
                     <br /> in many flavours.
                   </p>
                 </div>
-                <div className="flex space-x-3 justify-end p-4 text-black font-semibold">
+                <div className="flex space-x-3 justify-end text-xl p-4 text-black font-semibold">
                   <p>{drinkAtIndex.strCategory}</p>
                   <p>{drinkAtIndex.strGlass}</p>
                   <p>{drinkAtIndex.strAlcoholic}</p>
@@ -53,10 +51,13 @@ const HomePage = () => {
           ) : (
             <p className="text-gray-900">Loading...</p>
           )}
-          <div className="absolute bottom-10 text-center w-full">
+          <button className="absolute bottom-10 text-center w-full">
+            <div className="circle border border-black rounded-full w-24 h-24 flex items-center justify-center mx-auto">
+              <span className="text-black">Scroll</span>
+            </div>
             <div className="arrow text-black">
               <svg
-                className="animate-bounce w-6 h-6 mt-4 mx-auto"
+                className="animate-bounce w-6 h-6 mx-auto"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -69,7 +70,7 @@ const HomePage = () => {
                 ></path>
               </svg>
             </div>
-          </div>
+          </button>
         </div>
       </section>
     </>

@@ -31,11 +31,11 @@ const About = () => {
 
   return (
     <>
-      <section className="bg-white text-black mt-8" id="about">
+      <section className="bg-white text-black mt-8 p-4" id="about">
         <h2 className="font-bold text-4xl mb-6">About Us</h2>
-        <p className="text-gray-900 mb-6">
+        <p className="text-gray-900 mb-6 text-xl">
           Becardi Breezer, Breezer for short, is a fruit-based alcoholic
-          <br /> drink which comes in many flavours.
+          <br/> drink which comes in many flavours.
         </p>
         <div className="flex flex-row justify-between space-x-10 items-center">
           <div className="flex-1">

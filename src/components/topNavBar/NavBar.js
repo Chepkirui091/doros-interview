@@ -69,28 +69,28 @@ const NavBar = () => {
 
   return (
     <nav className="bg-white dark:bg-gray-800">
-      <div className="flex items-center justify-between mx-20">
+      <div className="flex flex-wrap items-center justify-between p-4 mx-auto max-w-7xl">
         <Logo />
         <div className="flex flex-1 justify-center space-x-4">
-          <a href="#home" className="">
+          <a href="#home" className="hidden sm:block">
             Home
           </a>
-          <div className="relative ml-auto">
+          <div className="relative ml-auto hidden sm:block">
             <a href="#flavours" className="">
               Flavours
             </a>
           </div>
-          <a href="#products" className="">
+          <a href="#products" className="hidden sm:block">
             Product
           </a>
-          <a href="#about" className="">
+          <a href="#about" className="hidden sm:block">
             About Us
           </a>
-          <a href="#contact" className="">
+          <a href="#contact" className="hidden sm:block">
             Contact Us
           </a>
         </div>
-        <div className="relative dropdown-container mr-20">
+        <div className="relative dropdown-container w-full sm:w-auto sm:mr-20 ">
           <IoIosSearch className="absolute left-3 top-2.5 h-5 w-5 text-gray-500 dark:text-gray-400" />
 
           <input
@@ -99,10 +99,10 @@ const NavBar = () => {
             value={searchTerm}
             onChange={handleSearchChange}
             onClick={() => setShowDropdown(true)}
-            className="border-2 border-gray-500 py-1 px-2 pl-10 rounded-none dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:border-blue-500"
+            className="border-2 border-gray-500 py-1 px-2 pl-10 w-40 sm:w-auto rounded-none dark:bg-gray-800 dark:text-gray-300 focus:outline-none focus:border-blue-500"
           />
 
-          {searchTerm && ( // Only show the clear button if searchTerm is not empty
+          {searchTerm && ( 
             <button
               onClick={handleClearSearch}
               className="absolute right-3 top-2.5 text-gray-500 dark:text-gray-400 focus:outline-none"
@@ -112,7 +112,7 @@ const NavBar = () => {
           )}
 
           {showDropdown && (
-            <div className="absolute mt-2 w-auto right-0 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-md shadow-lg z-10">
+            <div className="absolute mt-2 w-full sm:w-auto right-0 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg z-10">
               {filteredDrinks.map((drink) => (
                 <a
                   key={drink.idDrink}
@@ -126,7 +126,7 @@ const NavBar = () => {
             </div>
           )}
         </div>
-        <ShopNow />
+        <ShopNow className="hidden sm:block" />
       </div>
     </nav>
   );

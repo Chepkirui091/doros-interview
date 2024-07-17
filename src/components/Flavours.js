@@ -41,8 +41,8 @@ const Flavors = () => {
       <div className="bg-white relative p-4 md:p-8 mt-8">
         <div className="text-gray-900">
           <h1 className="text-4xl font-bold mb-4">Breezer Flavours</h1>
-          <p className="text-lg leading-relaxed mb-4">
-            Becardi Breezer, Breezer for short, is a fruit-based alcoholic drink
+          <p className="text-lg leading-relaxed mb-4 text-xl">
+            Becardi Breezer, Breezer for short, is a fruit-based<br/> alcoholic drink
             which comes in many flavours.
           </p>
         </div>

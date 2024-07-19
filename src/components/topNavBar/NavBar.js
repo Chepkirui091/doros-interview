@@ -5,7 +5,7 @@ import axios from "axios";
 import Logo from "@/components/topNavBar/Logo";
 import ShopNow from "@/components/topNavBar/ShopNow";
 import { IoIosSearch } from "react-icons/io";
-import { AiOutlineClose } from "react-icons/ai"; // Import close icon
+import { AiOutlineClose } from "react-icons/ai";
 
 const NavBar = () => {
   const [margaritas, setMargaritas] = useState([]);

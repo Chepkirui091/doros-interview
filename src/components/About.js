@@ -17,7 +17,7 @@ const About = () => {
   const [drinks, setDrinks] = useState([]);
   const [selectedDrink, setSelectedDrink] = useState(null);
   const [sections, setSections] = useState({
-    weBecardi: false,
+    weBecardi: true,
     ourProduct: false,
     howWeWork: false,
     ourBusiness: false,
@@ -74,7 +74,7 @@ const About = () => {
                       Becardi is a rum brand established in 1862 that has been producing
                       world-class rums since. Our history is rich, and hunger for
                       continued innovation in the industry never ceases.
-                    </p>
+                    </p>mkl
                   </>
               )}
 
